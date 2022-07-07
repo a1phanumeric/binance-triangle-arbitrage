@@ -30,15 +30,6 @@ The following dependencies are recommended to run an instance:
 1. **NodeJS** - 14.15.4
 2. **Npm** - 6.14.10
 
-
-### Obtain the Codebase
-* Clone from github
-    ```
-    git clone https://github.com/bmino/binance-triangle-arbitrage.git
-    ```
-* Download a zip of the [latest release](https://github.com/bmino/binance-triangle-arbitrage/releases/latest)
-
-
 ### Configuration
 All configuration is managed inside the `/config` directory.
 To setup your configuration for the first time, duplicate the `config.json.example` file and remove the ".example" extension.
@@ -80,16 +71,8 @@ All logs are stored in the `/logs` directory. The log level is set via the `LOG.
 
 ## Authors
 * **[Brandon Mino](https://github.com/bmino)** - *Project Lead*
+* **[Ed Rackham](https://github.com/a1phanumeric)** - *Developer*
 
-See also the list of [contributors](https://github.com/bmino/binance-triangle-arbitrage/contributors) who participated in this project.
-
-
-## Donations
-The developers listed above created and maintain this project for free.
-I don't expect any compensation, but if you appreciate my work feel free to donate to the following addresses:
-
-* Ethereum (ERC20): 0xFd7b8597cF8eE5317439B0B5C55a111F6Eec449D
 
 ## License
 This project is licensed under mit
-

@@ -1,12 +1,20 @@
 {
-  "name": "binance-triangle-arbitrage",
+  "name": "binancee",
   "version": "6.2.0",
+  "bin": "src/main/Main.js",
+  "pkg": {
+    "scripts": "src/main/*.js",
+    "assets": ["src/resources/**/*", "logs/*", "node_modules/blessed/usr/xterm"],
+    "targets": [ "node14-win-x64", "node14-macos-x64" ],
+    "outputPath": "dist"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/bmino/binance-triangle-arbitrage.git"
   },
   "author": {
     "name": "Brandon Mino"
+    "name": "Ed Rackham"
   },
   "engines": {
     "node": "14.15.4",
@@ -21,5 +29,8 @@
     "pino": "^6.11.1",
     "pino-pretty": "^4.5.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^19.0.8"
+  }
 }
