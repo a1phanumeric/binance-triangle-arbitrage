@@ -1,8 +1,9 @@
-const CONFIG = require('../../config/config');
 const fs = require('fs');
+let rawConfigData = fs.readFileSync("./config.json");
+const CONFIG = JSON.parse(rawConfigData);
 const pino = require('pino');
 
-const LOG_DIR = `${__dirname}/../../logs`;
+const LOG_DIR = `${process.cwd()}/logs`;
 const PINO_OPTS = {
     level: CONFIG.LOG.LEVEL,
     timestamp: () => `,"time":"${new Date().toLocaleString()}"`,

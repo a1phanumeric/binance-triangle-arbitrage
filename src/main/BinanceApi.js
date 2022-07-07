@@ -1,4 +1,6 @@
-const CONFIG = require('../../config/config');
+const fs = require('fs');
+let rawConfigData = fs.readFileSync("./config.json");
+const CONFIG = JSON.parse(rawConfigData);
 const logger = require('./Loggers');
 const Util = require('./Util');
 const Binance = require('node-binance-api');

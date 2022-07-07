@@ -1,4 +1,6 @@
-const CONFIG = require('../../config/config.json');
+const fs = require('fs');
+let rawConfigData = fs.readFileSync("./config.json");
+const CONFIG = JSON.parse(rawConfigData);
 const Util = require('./Util');
 const BinanceApi = require('./BinanceApi');
 

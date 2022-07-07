@@ -1,4 +1,6 @@
-const CONFIG = require('../../config/config');
+const fs = require('fs');
+let rawConfigData = fs.readFileSync("./config.json");
+const CONFIG = JSON.parse(rawConfigData);
 const logger = require('./Loggers');
 const Util = require('./Util');
 const BinanceApi = require('./BinanceApi');
@@ -28,6 +30,7 @@ Validation.configuration(CONFIG);
 process.on('uncaughtException', handleError);
 
 console.log(`Checking latency ...`);
+console.log(`EXECUTION CAP: ${CONFIG.EXECUTION.CAP}`);
 SpeedTest.multiPing(5)
     .then((pings) => {
         const msg = `Experiencing ${Util.average(pings).toFixed(0)} ms of latency`;
